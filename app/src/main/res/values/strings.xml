@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Торговый Агент</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_version">Версия 2.9.0</string>
+    <string name="Enter">Вход</string>
+    <string name="CompanyName">ООО \"Эффект\"</string>
+    <string name="SaveDetails">Запомнить данные</string>
+    <string name="Password">Пароль</string>
+    <string name="AgentLogin">Логин агента</string>
+    <string name="OrderClient">Client</string>
+    <string name="OrderEntities">Entities</string>
+    <string name="OrderPrice">Price</string>
+</resources>
