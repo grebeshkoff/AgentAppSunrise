@@ -17,10 +17,10 @@ import ua.dn.effect.ilg.agentappsunrise.util.*;
  * Time: 10:25
  */
 public class FtpConnection  {
-    public String Host = "195.225.158.2";
+    public String Host = "effect-mar.ddns.net";
     public int Port = 21;
     public String UserName = "agentpda040";
-    public String UserPassword = "Za040aGt";
+    public String UserPassword = "";
     public String RemoteFolder = "/" + UserName + "/";
 
     private FTPClient client = new FTPClient();
