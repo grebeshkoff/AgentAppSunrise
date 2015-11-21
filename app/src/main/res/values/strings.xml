@@ -14,4 +14,6 @@
     <string name="Orders">Отчеты</string>
     <string name="SendOrders">Отправка заказов</string>
     <string name="Settings">Настройки</string>
+    <string name="ClientOrders">Заказы клиентов</string>
+    <string name="Notifications">Уведомления</string>
 </resources>
