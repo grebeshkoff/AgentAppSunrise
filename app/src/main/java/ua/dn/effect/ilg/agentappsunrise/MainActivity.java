@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
         bnUploadOrders .setEnabled(AgentApplication.isDictionariesPresent);
 
         spinnerPriceListSelect = (Spinner)findViewById(R.id.spinnerSelectPrice);
-        List items = new ArrayList<String>();
+        List items = new ArrayList<>();
 
         File dicts = new File ("/data/data/ua.dn.effect.ilg.agentappsunrise/files/dictionaries/txt/");
 
@@ -167,6 +167,7 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, ChecksListActivity.class);
         startActivity(intent);
     }
+
     public void onClickNotifications(View view) {
         Intent intent = new Intent(this, NotificationsActivity.class);
         startActivity(intent);

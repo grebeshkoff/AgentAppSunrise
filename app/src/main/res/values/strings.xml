@@ -13,4 +13,5 @@
     <string name="title_activity_notifications">Notifications</string>
     <string name="Orders">Отчеты</string>
     <string name="SendOrders">Отправка заказов</string>
+    <string name="Settings">Настройки</string>
 </resources>
