@@ -10,6 +10,7 @@ import ua.dn.effect.ilg.agentappsunrise.data.config.AgentAppConfig;
 import ua.dn.effect.ilg.agentappsunrise.data.exchenge.FtpConnection;
 import ua.dn.effect.ilg.agentappsunrise.data.model.Check;
 import ua.dn.effect.ilg.agentappsunrise.data.model.Client;
+import ua.dn.effect.ilg.agentappsunrise.data.model.Notification;
 import ua.dn.effect.ilg.agentappsunrise.data.model.Order;
 import ua.dn.effect.ilg.agentappsunrise.data.model.PriceList;
 import ua.dn.effect.ilg.agentappsunrise.data.model.Report;
@@ -51,6 +52,8 @@ public class AgentApplication extends Application {
     public static List<Report> reportsList;
 
     public static List<Check> checkList;
+
+    public static List<Notification> notificationsList;
 
     public static Check currentCheck;
 

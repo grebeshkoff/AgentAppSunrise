@@ -15,6 +15,7 @@ public enum DataFileType{
     REPORT_PLAN("PLAN"),
     REPORT_PD("PD"),
     REPORT_PP("PP"),
+    NOTIFICATION("INFO"),
     UNDEFINED("UNDEFINED");
 
     public final String abr;
