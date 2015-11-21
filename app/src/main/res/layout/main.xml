@@ -36,6 +36,16 @@
                     android:id="@+id/button1" android:paddingTop="10dp"
                     android:onClick="onClickChecksList"
                     android:layout_marginBottom="10dp" android:textSize="20dp"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомления"
+                android:id="@+id/buttonNotifications"
+                android:onClick="onClickNotifications" android:paddingTop="10dp"
+                android:layout_marginBottom="10dp" android:textSize="20dp"/>
+
+
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="Прайс лист"
@@ -59,7 +69,7 @@
             <Button
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Отчеты"
+                    android:text="@string/Orders"
                     android:id="@+id/buttonReports"
                     android:onClick="onClickReports" android:paddingTop="10dp"
                     android:layout_marginBottom="10dp" android:textSize="20dp"/>
@@ -78,12 +88,13 @@
                     android:id="@+id/buttonDataLoad"
                     android:onClick="onClickDataLoad" android:paddingTop="10dp"
                     android:layout_marginBottom="10dp" android:textSize="20dp"/>
+
             <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Отправка заказов"
-                    android:id="@+id/buttonUploadOrders" android:onClick="onClickUploadOrders"
-                    android:layout_marginBottom="10dp" android:textSize="20dp"/>
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SendOrders"
+                android:id="@+id/buttonUploadOrders" android:onClick="onClickUploadOrders"
+                android:layout_marginBottom="10dp" android:textSize="20sp"/>
             <!--<Button-->
                     <!--android:layout_width="fill_parent"-->
                     <!--android:layout_height="wrap_content"-->

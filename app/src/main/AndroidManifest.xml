@@ -3,54 +3,83 @@
     package="ua.dn.effect.ilg.agentappsunrise"
     android:versionCode="1"
     android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-sdk android:minSdkVersion="17"
-        android:targetSdkVersion="23"/>
-    <application android:label="@string/app_name" android:icon="@drawable/logoicon" android:name=".AgentApplication">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.MainActivity"
+    <application
+        android:name=".AgentApplication"
+        android:icon="@drawable/logoicon"
+        android:label="@string/app_name">
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name" />
-
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.FtpSettingsActivity"
+        <activity
+            android:name=".FtpSettingsActivity"
             android:label="@string/app_name" />
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderActivity"
-            android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderContentActivity"
-            android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderPriceActivity"
-            android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderHeaderActivity"
-            android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ClientsActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ClientDetailActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.StartScreenActivity"
+        <activity
+            android:name=".OrderActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".OrderContentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".OrderPriceActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".OrderHeaderActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".ClientsActivity" />
+        <activity android:name=".ClientDetailActivity" />
+        <activity
+            android:name=".StartScreenActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderPriceGroupEntryActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderPriceEntityActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderContentEntityActivity"/>
+        <activity android:name=".OrderPriceGroupEntryActivity" />
+        <activity android:name=".OrderPriceEntityActivity" />
+        <activity android:name=".OrderContentEntityActivity" />
+        <activity
+            android:name=".ManualUpdateActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".UpdateSoftwareActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".UploadOrdersActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".OrdersListActivity" />
+        <activity android:name=".OrderAddHint1Activity" />
+        <activity android:name=".OrderAddHint2Activity" />
+        <activity
+            android:name=".OrderPriceActivityGroup"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".OrderContentActivityGroup"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ReportsListActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".ChecksListActivity" />
+        <activity android:name=".CheckActivity" />
 
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ManualUpdateActivity"   android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.UpdateSoftwareActivity" android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.UploadOrdersActivity"   android:theme="@android:style/Theme.Dialog" />
+        <service android:name=".FtpUpdateService" />
 
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrdersListActivity" />
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderAddHint1Activity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderAddHint2Activity"/>
-
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderPriceActivityGroup" android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.OrderContentActivityGroup" android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ReportsListActivity"  android:label="@string/app_name"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ReportActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.ChecksListActivity"/>
-        <activity android:name="ua.dn.effect.ilg.agentappsunrise.CheckActivity"/>
-        <service android:name="ua.dn.effect.ilg.agentappsunrise.FtpUpdateService"/>
+        <activity
+            android:name=".NotificationsActivity"
+            android:label="@string/title_activity_notifications"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
 </manifest>

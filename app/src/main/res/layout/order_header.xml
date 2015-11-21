@@ -87,18 +87,21 @@
                     android:layout_width="0dip"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Сохранить"
                     android:id="@+id/buttonSaveOrder"
                     android:layout_marginTop="20dp"
                     android:onClick="onClickSaveOrder"
+                    android:text="Сохранить"
                     android:enabled="false"/>
             <Button
                     android:layout_width="0dip"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="20dp"
                     android:text="Отмена"
                     android:onClick="onClickCancelOrder"
-                    android:id="@+id/buttonCancelPosition" android:layout_column="1" android:layout_marginTop="20dp"/>
+                    android:id="@+id/buttonCancelPosition"
+                    />
         </LinearLayout>
 
         </LinearLayout>

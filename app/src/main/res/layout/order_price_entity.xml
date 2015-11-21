@@ -157,27 +157,24 @@
                     android:id="@+id/textViewEntitySummTotal" android:layout_gravity="right|bottom"
                     android:textColor="#019eff" android:textSize="20dp"/>
         </FrameLayout>
-        <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-            <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
                 <Button
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Подтвердить"
-                        android:id="@+id/buttonAddPosition"
-                        android:layout_marginTop="20dp"
-                        />
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Подтвердить"
+                    android:id="@+id/buttonAddPosition"/>
                 <Button
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:text="Отмена"
-                        android:id="@+id/buttonCancelPosition" android:layout_column="1" android:layout_marginTop="20dp"
-                        />
-            </TableRow>
-        </TableLayout>
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="20dp"
+                    android:text="Отмена"
+                    android:id="@+id/buttonCancelPosition"/>
+        </LinearLayout>
+
 
     </LinearLayout>
     </ScrollView>

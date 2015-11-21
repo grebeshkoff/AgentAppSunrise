@@ -10,4 +10,7 @@
     <string name="OrderClient">Client</string>
     <string name="OrderEntities">Entities</string>
     <string name="OrderPrice">Price</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="Orders">Отчеты</string>
+    <string name="SendOrders">Отправка заказов</string>
 </resources>

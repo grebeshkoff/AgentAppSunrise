@@ -167,4 +167,8 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, ChecksListActivity.class);
         startActivity(intent);
     }
+    public void onClickNotifications(View view) {
+        Intent intent = new Intent(this, NotificationsActivity.class);
+        startActivity(intent);
+    }
 }
