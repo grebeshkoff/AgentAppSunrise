@@ -73,13 +73,10 @@
         <activity android:name=".ReportActivity" />
         <activity android:name=".ChecksListActivity" />
         <activity android:name=".CheckActivity" />
+        <activity android:name=".NotificationsActivity" />
 
         <service android:name=".FtpUpdateService" />
 
-        <activity
-            android:name=".NotificationsActivity"
-            android:label="@string/title_activity_notifications"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

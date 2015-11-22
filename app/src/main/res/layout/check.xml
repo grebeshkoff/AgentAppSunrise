@@ -19,7 +19,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Текущий клиент"
-                    android:id="@+id/textView" android:textSize="25dp"/>
+                    android:id="@+id/textViewChecksCurrentClient" android:textSize="25dp"/>
 
             <TextView
                     android:layout_width="fill_parent"
@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="На дату"
-                    android:id="@+id/textView" android:textSize="25dp"/>
+                    android:id="@+id/textViewChecksOnDate" android:textSize="25dp"/>
 
             <DatePicker
                     android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Номер чека"
-                    android:id="@+id/textView" android:textSize="25dp"/>
+                    android:id="@+id/textViewChecksCheckNumber" android:textSize="25dp"/>
 
             <EditText android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Сумма чека"
-                    android:id="@+id/textView" android:textSize="25dp"/>
+                    android:id="@+id/textViewChecksCheckSum" android:textSize="25dp"/>
 
             <LinearLayout android:layout_width="fill_parent"
                           android:layout_height="wrap_content"

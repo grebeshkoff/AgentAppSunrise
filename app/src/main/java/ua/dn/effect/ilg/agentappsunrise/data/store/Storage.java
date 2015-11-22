@@ -91,6 +91,8 @@ public abstract class Storage {
         for (File f: folder.listFiles()){
             DataFile df = new DataFile(f);
 
+            if (DataFile.getType(name) == DataFileType.PRICE_FILE)
+
             if (df.type == DataFile.getType(name)){
                 if(df.type != DataFileType.PRICE_FILE){
                     result =  f;

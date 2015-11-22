@@ -13,6 +13,7 @@ import android.widget.TextView;
 import ua.dn.effect.ilg.agentappsunrise.data.config.AgentAppConfig;
 import ua.dn.effect.ilg.agentappsunrise.data.model.TradeAgent;
 import ua.dn.effect.ilg.agentappsunrise.data.reader.EntitiesReader;
+import ua.dn.effect.ilg.agentappsunrise.data.reader.NotificationsReader;
 import ua.dn.effect.ilg.agentappsunrise.data.reader.ReportReader;
 import ua.dn.effect.ilg.agentappsunrise.data.reader.SalesReader;
 import ua.dn.effect.ilg.agentappsunrise.data.store.InternalStorage;
@@ -71,14 +72,14 @@ public class StartScreenActivity extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                InternalStorage storage = null;
-                storage = new InternalStorage(self);
+                InternalStorage storage = new InternalStorage(self);
                 AgentApplication.ftpConnection.Init(self);
                 AgentApplication.tradeAgent = new TradeAgent();
-                EntitiesReader reader = null;
-                reader = new EntitiesReader(storage);
-                AgentApplication.priceList = reader.getList();
+                EntitiesReader entitiesReader = new EntitiesReader(storage);
+                AgentApplication.priceList = entitiesReader.getList();
                 AgentApplication.salesHistory = SalesReader.getHistory(storage);
+                NotificationsReader notificationsReader = new NotificationsReader(storage);
+                AgentApplication.notificationsList = notificationsReader.getList();
                 AgentApplication.reportsList = ReportReader.getReportsList(storage);
                 if(AgentApplication.priceList.list.size() == 0){
                     AgentApplication.isDictionariesPresent = false;

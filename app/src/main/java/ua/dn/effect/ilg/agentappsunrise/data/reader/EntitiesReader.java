@@ -24,7 +24,7 @@ import ua.dn.effect.ilg.agentappsunrise.util.AgentAppLogger;
  * Time: 12:38
  */
 public class EntitiesReader {
-    HashMap<String, File> priceListFileCollection = new HashMap<String, File>();
+    HashMap<String, File> priceListFileCollection = new HashMap<>();
     PriceList priceList = new PriceList();
 
     Storage storage;
@@ -43,7 +43,6 @@ public class EntitiesReader {
                 String name = file.getName();
                 String acronim = name.split("_")[1];
                 priceListFileCollection.put(acronim, file);
-                //AgentAppLogger.Text(acronim + " -> " + file.getAbsolutePath());
             }
         }
     }
@@ -139,7 +138,6 @@ public class EntitiesReader {
 
             }
             date = new Date();
-            AgentAppLogger.Text("!!!!!!!!!!!!!!" + date.toString());
         } catch (UnsupportedEncodingException e) {
             AgentAppLogger.Error(e);
         } catch (IOException ie){

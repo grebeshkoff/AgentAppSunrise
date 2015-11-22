@@ -42,7 +42,7 @@ public class ClientsReader {
     private String clientParamPrefix = "8=";
 
 
-    Context ctx;
+    private Context ctx;
 
     public ClientsReader(Storage s) throws StorageException {
         storage = s;
@@ -58,21 +58,12 @@ public class ClientsReader {
                 AgentAppLogger.Text(agentClientsFile.getAbsolutePath());
             }
         }
-
-
-//        try {
-//            agentClientsFile = new File(storage.getDictionariesTextFolder().getAbsolutePath() + "/" + AgentApplication.getAgentZipFile());
-//        } catch (FtpFilesNotCheckedException e) {
-//            AgentAppLogger.Error(e);
-//        }
-//        ctx = storage.getCurrentContext();
-//        Log.e("AGNT", agentClientsFile.getAbsolutePath());
     }
 
 
 
     public List<Client> getList() {
-        ArrayList<Client> list = new ArrayList<Client>();
+        ArrayList<Client> list = new ArrayList<>();
         try{
             if(!agentClientsFile.exists()){
                 Toast.makeText(ctx, "Данные о клиентах не загружены", Toast.LENGTH_LONG);
@@ -81,10 +72,9 @@ public class ClientsReader {
                         new InputStreamReader(
                                 new FileInputStream(agentClientsFile.getAbsolutePath()), "cp1251"));
 
-                int i = 0;
                 String str;
 
-                ArrayList<String> params = new ArrayList<String>();
+                ArrayList<String> params = new ArrayList<>();
 
                 while ((str = br.readLine()) != null) {
                     if(str.startsWith("6=")){
@@ -118,16 +108,12 @@ public class ClientsReader {
                             params.add(s[s.length - 1]);
                         }
                     }
-                    i++;
                 }
                 list.add(0, new Client(-1, Client.NEW_CLIENT));
             }
-        }catch (FileNotFoundException fne){
+        }catch (FileNotFoundException | UnsupportedEncodingException fne){
             Log.e("AGNT", fne.getMessage());
-        }catch (UnsupportedEncodingException e) {
-            Log.e("AGNT", e.getMessage());
-        }
-        catch (IOException ioe){
+        } catch (IOException ioe){
             Log.e("AGNT", ioe.getMessage());
         }
         catch (Exception e){

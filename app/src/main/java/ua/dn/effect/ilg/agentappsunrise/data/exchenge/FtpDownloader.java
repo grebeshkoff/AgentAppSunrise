@@ -29,7 +29,7 @@ public class FtpDownloader {
     private FTPClient ftp = new FTPClient();
     private InternalStorage storage;
     private String localFolder;
-    private ArrayList<FTPFile> filesList = new ArrayList<FTPFile>();
+    private ArrayList<FTPFile> filesList = new ArrayList<>();
     private FtpConnection connection;
     public boolean isReady = false;
 
@@ -77,7 +77,7 @@ public class FtpDownloader {
                     IOUtils.closeQuietly(is);
                     boolean commandOK = ftp.completePendingCommand();
                     File test = new File(localFolder + fileName);
-                    if(oldFile != null){
+                    if(oldFile != null && fileType != DataFileType.NOTIFICATION){
                         if(ZipExtractor.isValid(test)) {
                             AgentAppLogger.Text(oldFile.getName());
                             oldFile.delete();
