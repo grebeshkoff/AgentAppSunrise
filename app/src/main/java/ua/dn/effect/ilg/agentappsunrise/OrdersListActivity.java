@@ -46,9 +46,9 @@ public class OrdersListActivity extends Activity {
     ListView lvOrders;
     SimpleAdapter adapter;
 
-    private ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
-    private ArrayList<HashMap<String, String>> savedOrders = new ArrayList<HashMap<String, String>>();
-    private ArrayList<HashMap<String, String>> newOrders = new ArrayList<HashMap<String, String>>();
+    private ArrayList<HashMap<String, String>> list = new ArrayList<>();
+    private ArrayList<HashMap<String, String>> savedOrders = new ArrayList<>();
+    private ArrayList<HashMap<String, String>> newOrders = new ArrayList<>();
 
     private void copyItems(ArrayList<HashMap<String, String>> target){
         list.clear();
@@ -57,13 +57,11 @@ public class OrdersListActivity extends Activity {
         }
     }
 
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.orders_list);
         ctx = this;
-        //Init();
     }
 
     @Override
@@ -100,22 +98,6 @@ public class OrdersListActivity extends Activity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
-//        if (item.getTitle().equals("Создать заказ")){
-//            AgentApplication.Mode = "Add";
-//            AgentApplication.currentOrder = new Order();
-//            Intent intent = new Intent(this, OrderActivity.class);
-//            startActivity(intent);
-//        }
-//        if (item.getTitle().equals("Отправленные")){
-//
-//        }
-//
-//        if (item.getTitle().equals("Не отправленные")){
-//
-//        }
-//
-//        return super.onOptionsItemSelected(item);
     }
 
     private void Init() {
@@ -127,10 +109,10 @@ public class OrdersListActivity extends Activity {
             ordersDir.mkdir();
         }
         File[] listOfFiles = ordersDir.listFiles();
-        list = new ArrayList<HashMap<String, String>>();
-        newOrders = new ArrayList<HashMap<String, String>>();
-        savedOrders = new ArrayList<HashMap<String, String>>();
-        AgentApplication.ordersFiles = new ArrayList<String>();
+        list = new ArrayList<>();
+        newOrders = new ArrayList<>();
+        savedOrders = new ArrayList<>();
+        AgentApplication.ordersFiles = new ArrayList<>();
         for (int i = 0; i < listOfFiles.length; i++) {
             if (listOfFiles[i].isFile()) {
 
